@@ -55,42 +55,32 @@
         event.preventDefault();        
       }
     </script>
-    
+  
     <style>
-       
-      textarea, input, button, label, select { height: inherit; } 
-      
-      label{
-        height: 3em;
-      }
-      
-      input {
-        height: 3em;
-      }
-      
+
     </style>
-    
+
   </head>
   
   <body>
-    
-    <form action="#" onsubmit="return which();" id="daysForm" name="daysForm" method="get" style="color: #444444; background-color: #EFEBE9; padding:15px; margin-bottom: 4em; LINE-HEIGHT:12px; font-size:11pt; font-family: Arial,Helvetica,sans-serif">
-    
-      <label for="question1" style="color:#5B4037; font-weight:bold; height=1.5em">Which of the following statements comes close to your personal fields of interest?<br><br></label>
+
+    <form action="#" onsubmit="return which();" id="daysForm" name="daysForm" method="get" style="color: #444444; background-color: #EFEBE9; padding:20px; margin-bottom: 4em; line-height:25px; font-size:11pt; font-family: Arial,Helvetica,sans-serif">
+
+      <label for="question1" style="color:#5B4037; font-weight:bold">Which of the following statements comes close to your personal fields of interest?<br></label>
       <label for="description1" style="font-size:10pt">(in terms of what we should focus on when we tour)<br><br></label>
 
       <input type="radio" name="topics" value="Jewish"> Jewish life and history are significantly more important than the German story<br><br>
-      <input type="radio" name="topics" value="Equal" style="height:3em; font-weight:bold"> Equally interested, more or less, in Jewish places and in the German story (most popular choice)<br><br>
+      <input type="radio" name="topics" value="Equal"> Equally interested, more or less, in Jewish places and in the German story (most popular choice)<br><br>
       <input type="radio" name="topics" value="German"> The German story is much more interesting than the Jewish specifics<br><br><hr><br>
 
-      <label for="question2" style="color:#5B4037;font-weight:bold">How many days would you want to tour with us?<br><br></label>
+      <label for="question2" style="color:#5B4037;font-weight:bold">How many days would you want to tour with us?<br></label>
       <label for="description2" style="font-size:10pt">(not the total number of days you'll spend in Berlin)<br><br></label>
 
       <input type="radio" name="days" value="1"> One day<br><br>
       <input type="radio" name="days" value="2"> Two days (most popular choice)<br><br>
-      <input type="radio" name="days" value="3"> Three days<br><br><br>
+      <input type="radio" name="days" value="3"> Three days<br><br>
    
-      <button type="submit" value="Submit">Submit</button>
+      <button type="submit" value="Submit">Give me a model itinerary!</button>
          
     </form>
     
