@@ -76,7 +76,7 @@
   
   <body>
 
-    <form action="#" onsubmit="return which();" id="daysForm" name="daysForm" method="post">
+    <form action="#" onsubmit="return false;" id="daysForm" name="daysForm" method="post">
 
       <label for="question1" style="color:#5B4037; font-weight:bold">Which of the following statements comes close to your personal fields of interest?<br></label>
       <label for="description1" style="font-size:10pt">(in terms of what we should focus on when we tour)<br><br></label>
@@ -92,7 +92,7 @@
       <input type="radio" name="days" value="2"> Two days (most popular choice)<br><br>
       <input type="radio" name="days" value="3"> Three days<br><br>
    
-      <div align=center> <button type="submit" value="Submit">Give me a model itinerary!</button> </div>
+      <div align=center> <button type="submit" value="Submit" onclick="which()">Give me a model itinerary!</button> </div>
          
     </form>
     
