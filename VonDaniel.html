@@ -15,8 +15,7 @@
   // die functions von code.gs sind hier unbekannt!
 
   function which(event) {
-    event.preventDefault()
-
+    
     // hide all links
     var allLinks = document.querySelectorAll('.itinerary-link')
     allLinks.forEach(function (el) {
@@ -84,6 +83,8 @@
     if (choice_days == 3 && choice_topic == 'German') {
       var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_9')
       chosenLink.classList.remove('hidden')
+      
+    event.preventDefault();
     }
   }
 </script>
