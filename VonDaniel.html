@@ -1,0 +1,166 @@
+<noscript>
+  <div style="border: 1px solid red; padding: 10px">
+    <span style="color: black"
+      >It seems that JavaScript is not enabled in your browser. The interactive
+      form (below) won't work without Javascript. If you don't know how to
+      enable JavaScript in your browser, please visit our website with a
+      different device (such as your phone).</span
+    >
+  </div>
+  <br />
+</noscript>
+
+<script>
+  // hier gilt ganz normales Javascript (eine App fuer sich)
+  // die functions von code.gs sind hier unbekannt!
+
+  function which(event) {
+    event.preventDefault()
+
+    // hide all links
+    var allLinks = document.querySelectorAll('.itinerary-link')
+    allLinks.forEach(function (el) {
+      el.classList.add('hidden')
+    })
+
+    var choice_topic = 'nichts'
+    var radios1 = document.getElementsByName('topics')
+    for (var i = 0, length = radios1.length; i < length; i++) {
+      if (radios1[i].checked) {
+        choice_topic = radios1[i].value
+      }
+    }
+
+    var choice_days = 9
+    var radios2 = document.getElementsByName('days')
+    for (var i = 0, length = radios2.length; i < length; i++) {
+      if (radios2[i].checked) {
+        // do whatever you want with the checked radio
+        // only one radio can be logically checked, don't check the rest
+        choice_days = i + 1
+      }
+    }
+
+    if (choice_days == 9 || choice_topic == 'nichts') {
+      return
+    }
+
+    if (choice_days == 1 && choice_topic == 'Jewish') {
+      // EXAMPLE HOW TO SHOW ONE LINK
+      // var chosenLink = document.querySelector('ADD THE SELECTOR FOR THE LINK TO SHOW')
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_1')
+      chosenLink.classList.remove('hidden')
+    }
+    if (choice_days == 2 && choice_topic == 'Jewish') {
+      top.location = '/two-days-mostly-jewish'
+    }
+    if (choice_days == 3 && choice_topic == 'Jewish') {
+      top.location = '/three-days-mostly-jewish'
+    }
+
+    if (choice_days == 1 && choice_topic == 'Equal') {
+      top.location = '/one-day-combined'
+    }
+    if (choice_days == 2 && choice_topic == 'Equal') {
+      top.location = '/two-days-combined'
+    }
+    if (choice_days == 3 && choice_topic == 'Equal') {
+      top.location = '/three-days-combined'
+    }
+
+    if (choice_days == 1 && choice_topic == 'German') {
+      top.location = '/one-day-mostly-german'
+    }
+    if (choice_days == 2 && choice_topic == 'German') {
+      top.location = '/two-days-mostly-german'
+    }
+    if (choice_days == 3 && choice_topic == 'German') {
+      top.location = '/three-days-mostly-german'
+    }
+  }
+</script>
+
+<style>
+  button {
+    font-size: 12pt;
+  }
+
+  form {
+    color: #444444;
+    background-color: #efebe9;
+    padding: 20px;
+    margin-bottom: 0em;
+    line-height: 25px;
+    font-size: 11pt;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<body>
+  <form
+    action="#"
+    onsubmit="return false;"
+    id="daysForm"
+    name="daysForm"
+    method="post"
+  >
+    <label for="question1" style="color: #5b4037; font-weight: bold"
+      >Which of the following statements comes close to your personal fields of
+      interest?<br
+    /></label>
+    <label for="description1" style="font-size: 10pt"
+      >(in terms of what we should focus on when we tour)<br /><br
+    /></label>
+
+    <input onclick="which()" type="radio" name="topics" value="Jewish" /> Jewish
+    life and history are significantly more important than the German story<br /><br />
+    <input onclick="which()" type="radio" name="topics" value="Equal" /> Equally
+    interested, more or less, in Jewish places and in the German story (most
+    popular choice)<br /><br />
+    <input onclick="which()" type="radio" name="topics" value="German" /> The
+    German story is much more interesting than the Jewish specifics<br /><br />
+    <hr />
+    <br />
+
+    <label for="question2" style="color: #5b4037; font-weight: bold"
+      >How many days would you want to tour with us?<br
+    /></label>
+    <label for="description2" style="font-size: 10pt"
+      >(not the total number of days you'll spend in Berlin)<br /><br
+    /></label>
+
+    <input onclick="which()" type="radio" name="days" value="1" /> One day<br /><br />
+    <input onclick="which()" type="radio" name="days" value="2" /> Two days
+    (most popular choice)<br /><br />
+    <input onclick="which()" type="radio" name="days" value="3" /> Three days<br /><br />
+
+    <a
+      id="itinerary-link-UNIQUE_ID_1"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/three-days-mostly-german"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_2"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/another"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_3"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/another-2"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_4"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/another-3"
+      >Link to your itinerary</a
+    >
+  </form>
+</body>
