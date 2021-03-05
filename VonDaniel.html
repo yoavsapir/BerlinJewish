@@ -52,30 +52,38 @@
       chosenLink.classList.remove('hidden')
     }
     if (choice_days == 2 && choice_topic == 'Jewish') {
-      top.location = '/two-days-mostly-jewish'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_2')
+      chosenLink.classList.remove('hidden')
     }
     if (choice_days == 3 && choice_topic == 'Jewish') {
-      top.location = '/three-days-mostly-jewish'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_3')
+      chosenLink.classList.remove('hidden')
     }
 
     if (choice_days == 1 && choice_topic == 'Equal') {
-      top.location = '/one-day-combined'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_4')
+      chosenLink.classList.remove('hidden')
     }
     if (choice_days == 2 && choice_topic == 'Equal') {
-      top.location = '/two-days-combined'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_5')
+      chosenLink.classList.remove('hidden')
     }
     if (choice_days == 3 && choice_topic == 'Equal') {
-      top.location = '/three-days-combined'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_6')
+      chosenLink.classList.remove('hidden')
     }
 
     if (choice_days == 1 && choice_topic == 'German') {
-      top.location = '/one-day-mostly-german'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_7')
+      chosenLink.classList.remove('hidden')
     }
     if (choice_days == 2 && choice_topic == 'German') {
-      top.location = '/two-days-mostly-german'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_8')
+      chosenLink.classList.remove('hidden')
     }
     if (choice_days == 3 && choice_topic == 'German') {
-      top.location = '/three-days-mostly-german'
+      var chosenLink = document.querySelector('itinerary-link-UNIQUE_ID_9')
+      chosenLink.classList.remove('hidden')
     }
   }
 </script>
@@ -141,26 +149,59 @@
     <a
       id="itinerary-link-UNIQUE_ID_1"
       class="itinerary-link hidden"
-      href="http://www.BerlinJewish.com/three-days-mostly-german"
+      href="http://www.BerlinJewish.com/one-day-mostly-jewish"
       >Link to your itinerary</a
     >
     <a
       id="itinerary-link-UNIQUE_ID_2"
       class="itinerary-link hidden"
-      href="http://www.BerlinJewish.com/another"
+      href="http://www.BerlinJewish.com/two-days-mostly-jewish"
       >Link to your itinerary</a
     >
     <a
       id="itinerary-link-UNIQUE_ID_3"
       class="itinerary-link hidden"
-      href="http://www.BerlinJewish.com/another-2"
+      href="http://www.BerlinJewish.com/three-days-mostly-jewish"
       >Link to your itinerary</a
     >
+    
     <a
       id="itinerary-link-UNIQUE_ID_4"
       class="itinerary-link hidden"
-      href="http://www.BerlinJewish.com/another-3"
+      href="http://www.BerlinJewish.com/one-day-combined"
       >Link to your itinerary</a
     >
+    <a
+      id="itinerary-link-UNIQUE_ID_5"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/two-days-combined"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_6"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/three-days-combined"
+      >Link to your itinerary</a
+    >
+    
+    <a
+      id="itinerary-link-UNIQUE_ID_7"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/one-day-mostly-german"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_8"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/two-days-mostly-german"
+      >Link to your itinerary</a
+    >
+    <a
+      id="itinerary-link-UNIQUE_ID_9"
+      class="itinerary-link hidden"
+      href="http://www.BerlinJewish.com/three-days-mostly-german"
+      >Link to your itinerary</a
+    >
+    
   </form>
 </body>
