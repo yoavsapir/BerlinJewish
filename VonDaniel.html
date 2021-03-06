@@ -14,7 +14,9 @@
   // hier gilt ganz normales Javascript (eine App fuer sich)
   // die functions von code.gs sind hier unbekannt!
 
-  function which() {
+  function which(event) {
+    
+    event.preventDefault()
     
     // hide all links
     var allLinks = document.querySelectorAll('.itinerary-link')
